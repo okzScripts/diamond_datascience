@@ -10,8 +10,6 @@ if "df" in st.session_state:
     df = st.session_state["df"]
 
 
-df = df[np.abs(df['depth_error']) < 0.5]
-
 if df.empty:
     st.error("No diamonds satisfy the adjusted depth condition.")
     st.stop()
